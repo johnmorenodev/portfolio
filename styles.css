@@ -2,22 +2,24 @@
 :root {
   --bg:         #ffffff;
   --text:       #33332d;
-  --muted:      #a0a0a0;
+  --muted:      #787878;
   --border:     #e1e1e1;
   --card-bg:    #f9f9f8;
   --hover-bg:   #33332d;
   --hover-text: #ffffff;
   --green:      #16a34a;
+  --accent:     #706be4;
 }
 
 [data-theme="dark"] {
   --bg:         #33332d;
   --text:       #ffffff;
-  --muted:      #888880;
+  --muted:      #9e9d96;
   --border:     #4a4a43;
   --card-bg:    #3d3d36;
   --hover-bg:   #ffffff;
   --hover-text: #33332d;
+  --accent:     #a89ef0;
 }
 
 /* ── Reset ─────────────────────────────────────────────── */
@@ -76,6 +78,11 @@ nav {
   font-size: 0.9rem;
   text-decoration: none;
   letter-spacing: 0.1em;
+  transition: color 0.15s;
+}
+
+.nav-logo:hover {
+  color: var(--accent);
 }
 
 .nav-menu {
@@ -85,15 +92,33 @@ nav {
 }
 
 .nav-link {
+  position: relative;
   font-size: 0.85rem;
   text-decoration: none;
   opacity: 0.6;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
   opacity: 1;
+  color: var(--accent);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .nav-resume {
@@ -157,7 +182,7 @@ nav {
 .section-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.72rem;
-  color: var(--muted);
+  color: var(--accent);
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
 }
@@ -358,6 +383,11 @@ h1 {
   transition: border-color 0.2s, color 0.2s;
 }
 
+.skill-tags .tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .project-links {
   display: flex;
   gap: 1.5rem;
@@ -371,7 +401,13 @@ h1 {
 }
 
 .project-link:hover {
-  opacity: 0.65;
+  opacity: 1;
+  color: var(--accent);
+}
+
+.project-card:hover .project-link:hover {
+  color: var(--hover-text);
+  opacity: 0.7;
 }
 
 .project-wip {
@@ -442,6 +478,14 @@ h1 {
 
 .contact-link:hover {
   padding-left: 0.6rem;
+}
+
+.contact-link:hover .contact-label {
+  color: var(--accent);
+}
+
+.contact-link:hover .contact-value {
+  color: var(--accent);
 }
 
 .contact-label {

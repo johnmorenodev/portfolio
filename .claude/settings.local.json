@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:fullstackopen.com)",
+      "Bash(git init:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

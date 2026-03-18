@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #33332d;
+      color: #ffffff;
+      font-family: 'IBM Plex Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      padding: 80px;
+      overflow: hidden;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      color: #16a34a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 80px;
+      font-weight: 600;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+
+    .role {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 20px;
+      color: #9e9d96;
+    }
+
+    .domain {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      color: #a89ef0;
+      margin-top: 8px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 80px;
+      right: 80px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <span class="logo">JCM</span>
+  <div class="content">
+    <span class="badge"><span class="dot"></span>Available for work</span>
+    <h1>John Christopher<br>Moreno</h1>
+    <p class="role">Software Developer</p>
+    <p class="domain">johnmorenodev.com</p>
+  </div>
+</body>
+</html>
